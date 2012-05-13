@@ -1,0 +1,67 @@
+﻿1. github简介
+   (1) github的作用：存放和管理代码，对代码进行版本控制。
+   (2) git是一个分布式的版本控制系统，最初用作Linux内核代码的管理。
+   (3) github可以托管各种git库，并提供一个web界面。
+
+2. github使用
+   (1) 访问网址：https://github.com/
+   (2) 点击“Set up git”来安装git。
+       (2.1) 点击“Git for Windows”来下载Windows版的git
+             (例如选择“Full installer for official Git for Windows 1.7.9 ”对应的“Git-1.7.9-preview20120201.exe”)。
+       (2.2) 安装git(按默认选择安装)。
+       (2.3) 安装SSH Keys(使用SSH Keys可以在个人电脑和github间建立起安全的连接)。
+             (2.3.1) 检查SSH Keys是否已经存在。
+                     在“开始程序菜单”中找到Git项，单击“Git Bash”。
+                     输入cd ~/.ssh回车后，
+                     (2.3.1.1) 如果显示“No such file or directory”，就说明SSH Keys尚不存在，就生成一个SSH Keys。
+                               输入ssh-keygen -t rsa -C "邮箱地址"后回车，
+                               输入保存SSH Key的文件的文件名(例如xxx)后回车，
+                               输入密码后回车，
+                               显示的结果是: 你的id标识已经被保存在xxx文件中，
+                                             你的SSH Key被保存在了xxx.pub中，
+                               结果是在“C:\Documents and Settings\Administrator”有两个文件: xxx和xxx.pub。
+                     (2.3.1.2) 否则，说明SSH Keys已经存在，就删除掉已经存在的SSH Keys。
+                               输入ls后回车，显示“config id_rsa xxx.pub known_hosts”，
+                               输入mkdir key_backup后回车，
+                               输入cp xxx* key_backup后回车，
+                               输入rm xxx*后回车。
+                               然后，再按“(2.3.1.1)”中的输入来生成一个新的SSH Keys。
+             (2.3.2) 把SSH Key添加到github。
+                     在“开始程序菜单”中找到Git项，单击“Git GUI”，选择“帮助->Show SSH Key”，单击Generate Key按钮，
+                     单击“Copy To Clipboard”按钮。(注意：不要用记事本打开后复制，因为这样会出错)
+                     单击页面右上角中的“Account Settings”按钮，单击左侧的“SSH Keys”，单击右侧的“Add SSH key”按钮，
+                     把剪贴板中的内容粘贴到页面中Key对应的编辑框中，点击“Add key”按钮。
+             (2.3.3) 输入访问登录https://github.com/时的密码。
+             (2.3.4) 测试是否正确
+                     输入ssh -T git@github.com后回车，输入yes后回车，
+                     我测试的结果是显示“Permission denied(publickey)”。
+   (3) 配置信息
+       (3.1) 配置用户名和email，这里的用户名不是github的用户名。
+             输入git config --global user.name "用户名"后回车，
+             输入git config --global user.email "邮箱地址"后回车。
+       (3.2) 配置github token。
+             单击页面右上角中的“Account Settings”按钮，单击左侧的“Account Settings”，可以看到API Token值yyy。
+             输入git config --global github.user 用户名称
+             输入git config --global github.token yyy
+             注意：“github.user 用户名称”中的“用户名称”是github的用户名。
+   (4) Create a Repository
+       (4.1) 点击“Create a Repository”来创建一个储存库(即版本库)。
+             Project Name: algorithm
+             Description: 算法
+             Homepage URL: https://github.com/用户名称/project/algorithm
+       (4.2) 创建一个README文件
+             输入cd "d:/github/用户名称/project/algorithm"后回车，
+             输入git init后回车，在“d:/github/用户名称/project/algorithm”中产生了.git文件夹，
+             输入touch README后回车，在“d:/github/用户名称/project/algorithm”中产生了README文件。
+       (4.3) 把本地的README文件提交到本地上。
+             输入git add README后回车，
+             输入git commit -m 'first commit'后回车。
+       (4.4) 把版本库Repository中的内容提交到github上。
+             输入git remote add origin git@github.com:用户名称/algorithm.git后回车，
+             输入git push -u origin master后回车。
+
+   (5) 使用Git GUI提交代码
+       (5.1) 在“d:/github/用户名称/project/algorithm”中右键，选择“Git Gui”。
+       (5.2) 依次单击下列按钮“重新扫描”->“缓存改动”->“签名(Sign Off)”->“提交”->“上传”。
+             注意：要写“提交描述”。要一个功能一个功能地提交，因为每个功能都可以写相应的“提交描述”。
+   (6) 非代码txt文本文件，用UTF-8格式进行另存为后再上传github，因为github使用的是UTF-8格式。
