@@ -1,0 +1,38 @@
+﻿前提：打开source insight软件。
+
+1. 创建工程
+   (1) 点击菜单Project->New Project...，进入New Project对话框。
+   (2) 输入工程名称。
+   (3) 点击Browse...按钮来选择代码路径。这样，一个工程名称就对应了一个代码集合。
+       注意：工程名称和代码本身没有任何关系，所以工程名称可以随便取。
+   (4) 点击OK按钮进入New Project Settings对话框。
+
+2. 界面介绍
+   (1) 界面左区域显示当前文件中所有的变量名称、函数名称及包含的文件名称等。
+   (2) 界面中区域显示当前文件的内容。
+   (3) 界面右区域显示整个工程中的文件。
+   (4) 界面下区域显示当前文件中某个内容的相关详细信息。
+       例如把光标放到中间区域的某个函数上时，在下区域就会显示该函数的函数体。
+
+3. 设置
+   (1) 字体
+       点击菜单Options->Document Options...，进入Document Options对话框，
+       点击Screen Fonts...按钮，进入字体对话框，设置的字体有以下几种：
+       Courier New, 常规， 10
+       Fixedsys, 常规， 10
+   (2) Tab
+       点击菜单Options->Document Options...，进入Document Options对话框，
+       在Tab width中输入4，
+       勾上Expand tabs(它使一个Tab键用4个空格来代替)。
+   (3) 行号
+       点击菜单Options->Document Options...，进入Document Options对话框，
+       勾上Show line numbers。
+
+4. 常用技巧
+
+5. 常用快捷键
+   (1) Shift+F8: 使光标所在位置的单词高亮显示，且当前文件中所有相同的单词也都高亮显示。
+   (2) Ctrl+G: 跳转到当前文件中的某一行。
+   (3) Ctrl+F: 在当前文件中查找。
+   (4) Ctrl+鼠标左键单击: 把鼠标指向某个单词，左键单击一下，就能进入该单词的定义。
+   (5) Alt+F12: 使所有文件中的每个字符宽度和高度一致。
