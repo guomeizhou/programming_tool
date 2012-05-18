@@ -6,6 +6,15 @@
    (3) 点击Browse...按钮来选择代码路径。这样，一个工程名称就对应了一个代码集合。
        注意：工程名称和代码本身没有任何关系，所以工程名称可以随便取。
    (4) 点击OK按钮进入New Project Settings对话框。
+   (5) 对于“Store function-local symbols in database.”复选框，
+       勾上的话会生成和工程中的所有文件大小差不多大小的数据库文件，好处是在使用工程时速度会加快。
+   (6) 点击OK按钮进入Add and Remove Project Files对话框。
+   (7) 单击Add All按钮或者Add Tree按钮把当前选择的文件夹中的文件添加到工程中。
+       单击Add All按钮：进入Add to Project对话框，勾上“Recursively add lower sub-directories”复选框会把
+                        当前选择的文件夹中的所有文件都添加到工程中。
+       单击Add Tree按钮：递归加入所有文件，采用了部分打开文件的方式，没有用到的文件不会打开，
+                         加入数千个文件也不用担心加入的文件超出程序的所能容忍的最大值。
+   (8) 单击Close按钮。
 
 2. 界面介绍
    (1) 界面左区域显示当前文件中所有的变量名称、函数名称及包含的文件名称等。
@@ -27,6 +36,12 @@
    (3) 行号
        点击菜单Options->Document Options...，进入Document Options对话框，
        勾上Show line numbers。
+   (4) 加入新的文件类型
+       使用场合：当New Project并且Add All时发现列表中没有文件夹下某些类型的文件，
+                 或者在使用某工程时发现搜索不到某些类型的文件。
+       例如加入*.mk：点击菜单Options->Document Options...，进入Document Options对话框，
+                     在Document Type:中选择Make File，在File filter:中增加*.mk，
+                     当前工程不能生效，需要New Project并且Add All或Add Tree。
 
 4. 常用技巧
 
