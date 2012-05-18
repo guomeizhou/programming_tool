@@ -5,7 +5,7 @@
 
 2. github使用
    (1) 访问网址：https://github.com/
-   (2) 点击“Set up git”来安装git。
+   (2) 点击“Set up git”来安装git(登录后才会看到该选项，如果没有该选项，就访问http://code.google.com/p/msysgit/downloads/list)。
        (2.1) 点击“Git for Windows”来下载Windows版的git
              (例如选择“Full installer for official Git for Windows 1.7.9 ”对应的“Git-1.7.9-preview20120201.exe”)。
        (2.2) 安装git(按默认选择安装)。
@@ -59,9 +59,22 @@
        (4.4) 把版本库Repository中的内容提交到github上。
              输入git remote add origin git@github.com:用户名称/algorithm.git后回车，
              输入git push -u origin master后回车。
-
    (5) 使用Git GUI提交代码
        (5.1) 在“d:/github/用户名称/project/algorithm”中右键，选择“Git Gui”。
        (5.2) 依次单击下列按钮“重新扫描”->“缓存改动”->“签名(Sign Off)”->“提交”->“上传”。
              注意：要写“提交描述”。要一个功能一个功能地提交，因为每个功能都可以写相应的“提交描述”。
    (6) 非代码txt文本文件，用UTF-8格式进行另存为后再上传github，因为github使用的是UTF-8格式。
+   (7) 修改头像
+       (7.1) 在你的github的主页的右上角点击Account Settings按钮(或者点击Edit Your Profile按钮)，
+           单击左边的Profile项，单击右边的“Change your avatar at Gravatar.com”。       
+           注：也可以直接访问https://en.gravatar.com/
+       (7.2) 单击Sign up选项，输入你的github的Email地址(其它email没试过)，单击Signup按钮。
+       (7.3) 登录你的Email，你会收到一封信，访问该信中的链接，然后设置你的gravatar的邮箱、用户名、密码、头像(选G普通级)。
+       (7.4) 选择My Account->Edit My Profile选项，单击左边的My Links选项，在右边输入你的github地址和该网页的名称。
+             例如：https://github.com/xxx和xxx
+       (7.5) 登录你的github，会发现头像已经和gravatar的头像一样了。
+             如果还没有设置成功，你可以点击你的github主页左上角的头像来设置。
+       注：gravatar是“全球通用头像”的意思，只要把头像放在gravatar的服务器上，那么在任何支持gravatar的blog或者留言本上留言时，
+           只要提供你与这个头像关联的email地址，就能够显示出你的gravatar头像来。
+   (8) Delete a Repository
+       登录并访问该Repository，单击上边的Admin按钮，单击左边的Options选项，单击右边的Delete this repository按钮即可。
